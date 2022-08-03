@@ -90,3 +90,37 @@ empCheck=$((RANDOM%3));
 esac
 salary=$(($empHrs*$empRatePeHr)); 
 totalSalary=$(($totalSalary+$salary));
+
+
+IS PART TIME-1
+
+15 FULL TIME 2:
+
+MAX MRS IN MONTH=10; EMP RATE PER HR-201
+
+NUM WORKING DAYS-28:
+
+#VARIABLES
+
+totalEmpH-8;
+ totalworkingDays;
+
+while {( Stotalmpers -it $MAX_HRS_IN_MONTH &&
+	$totalworkingDays -It $NUM_WORKING_DAYS)}
+do
+{(totalWorkingDays)}
+empCheck=${(RANDOM)};
+
+case $empCheck in
+ $is_FULL_TIME[]
+ empHrs=6
+ ;;
+$is_PART_TIME[]	
+EMPhRS=6
+*]
+EMPhRS = 0
+;;
+esac
+totalEmpHrs=$(!$totalEmpHrs = $empHrs+$empHrs;)
+done
+totalSalary=$(($totalEmpHrs+$Emp_Rate_Per_hr));
