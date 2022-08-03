@@ -7,13 +7,7 @@ case $rand in
 *) echo "Employee is present"
 esac
 
-rand=$(($RANDOM%2))
-case $rand in
-	0) echo "Employee is absent"
-		;;
-	*) echo "Employee is present"
-		;;
-esac
+
 wagePerHour=20
 dayHour=8
 dailyWage=$(($wagePerHour*$dayHour))
@@ -72,3 +66,27 @@ empHrs=0
 ;;
 esac
 salary=$(($empHrs*$empRatePerHr));
+
+
+isPartTime=1;
+isFullTime=2;
+totalSalary=0; 
+empRatePerHr=20;
+numWorkingDays=20;
+
+for (( day=1; day<=$numWorkingDays; day++)) 
+do 
+empCheck=$((RANDOM%3));
+ case $empCheck in 
+ 	$isFullTime)
+    empHrs=8
+    ;;
+    $isPartTime)
+     empHrs=4
+     ;;
+     *)
+   empHrs=0
+     ;;
+esac
+salary=$(($empHrs*$empRatePeHr)); 
+totalSalary=$(($totalSalary+$salary));
